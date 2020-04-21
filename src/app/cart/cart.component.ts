@@ -71,9 +71,9 @@ export class CartComponent implements OnInit {
     return resp;
   }
 
-async removeCar(car: any, index: number) {
-  console.log('from removeCar...', index)
-  this.cars.splice(index, 1);
-}
+  async removeCar(car: any, index: number) {
+    console.log('from removeCar...', index)
+    this.cars.splice(index, 1);
+  }
 
 }

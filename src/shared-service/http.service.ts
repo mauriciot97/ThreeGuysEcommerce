@@ -38,8 +38,16 @@ export class HttpService {
   }
 
   async delete(path: string) {
-    const resp = await this.http.delete(path);
+    const resp = await this.http.delete(this.apiURL + path, this.headers).toPromise();
+    console.log('from http service delete()', resp.json());
+    return resp.json();
+  }
 
+  // logout();
+  async logout() {
+    const resp = await this.http.get(this.apiURL + 'user/logout', this.headers).toPromise();
+    console.log('from http service logout()', resp.json());
+    return resp.json();
   }
 
   get headers() {
