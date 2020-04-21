@@ -30,11 +30,15 @@ export class HttpService {
     return resp.json();
   }
 
-  put() {
-
+  // put('car/id/1', {make: 'Toyota', model: 'Celica'});
+  async put(path: string, payload: any) {
+    const resp = await this.http.put(this.apiURL + path, payload, this.headers).toPromise();
+    console.log('from http service put()', resp.json());
+    return resp.json();
   }
 
-  delete() {
+  async delete(path: string) {
+    const resp = await this.http.delete(path);
 
   }
 
