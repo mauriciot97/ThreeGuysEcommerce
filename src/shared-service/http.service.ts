@@ -38,7 +38,7 @@ export class HttpService {
   }
 
   async delete(path: string) {
-    const resp = await this.http.delete(this.apiURL + path, this.headers).toPromise();
+    const resp = await this.http.delete(this.apiURL + 'car/delete-car/id/', this.headers).toPromise();
     console.log('from http service delete()', resp.json());
     return resp.json();
   }
