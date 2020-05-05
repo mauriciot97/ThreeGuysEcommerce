@@ -7,15 +7,6 @@
     <button mat-raised-button color="primary" (click)="createCar()">Add New Car</button>
   </li>
   <li class="nav-item">
-    <button mat-raised-button color="primary">Add Bike Model 1</button>
-  </li>
-  <li class="nav-item">
-    <button mat-raised-button color="primary">Add Bike Model 2</button>
-  </li>
-  <li class="nav-item">
-    <button mat-raised-button color="primary">Add Bike Model 3</button>
-  </li>
-  <li class="nav-item">
     <button mat-raised-button color="primary">Checkout</button>
   </li>
 </ul>
@@ -44,9 +35,9 @@
             aria-describedby="basic-addon1">
         </p>
         <p>
-          <label for="description">Description:</label>
-          <input [(ngModel)]="car.description" type="text" class="form-control" placeholder="Description"
-            aria-label="desc" aria-describedby="basic-addon1">
+          <label for="quantity">Color</label>
+          <input [(ngModel)]="car.color" type="text" class="form-control" placeholder="Color" aria-label="Color"
+            aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="price">Price</label>
@@ -54,8 +45,18 @@
             aria-describedby="basic-addon1">
         </p>
         <p>
-          <label for="quantity">Quantity</label>
-          <input type="text" class="form-control" placeholder="Quantity" aria-label="qty"
+          <label for="quantity">Year</label>
+          <input [(ngModel)]="car.year" type="text" class="form-control" placeholder="Year" aria-label="year"
+            aria-describedby="basic-addon1">
+        </p>
+        <p>
+          <label for="quantity">Mileage</label>
+          <input [(ngModel)]="car.mileage" type="text" class="form-control" placeholder="Mileage" aria-label="mileage"
+            aria-describedby="basic-addon1">
+        </p>
+        <p>
+          <label for="quantity">Seller</label>
+          <input [(ngModel)]="car.seller" type="text" class="form-control" placeholder="Seller" aria-label="mileage"
             aria-describedby="basic-addon1">
         </p>
       </mat-card-content>

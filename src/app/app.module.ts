@@ -14,6 +14,9 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { SharedServiceModule } from '../shared-service/shared-service.module';
+import { ClothesComponent } from './clothes/clothes.component';
+import { PhonesComponent } from './phones/phones.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { SharedServiceModule } from '../shared-service/shared-service.module';
     LoginComponent,
     MainNavComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    ClothesComponent,
+    PhonesComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
