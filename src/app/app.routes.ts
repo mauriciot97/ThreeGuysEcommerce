@@ -5,6 +5,10 @@ import { HomeComponent } from './home/home.component';
 import { ClothesComponent } from './clothes/clothes.component';
 import { PhonesComponent } from './phones/phones.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+
 
 const appRoutes: Routes = [
   {
@@ -29,6 +33,18 @@ const appRoutes: Routes = [
   {
     path: 'cars',
     component: CartComponent
+  },
+  {
+    path: 'cart',
+    component: ShoppingCartComponent
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent
+  },
+  {
+    path: 'thankyou',
+    component: OrderConfirmationComponent
   }
 ];
 

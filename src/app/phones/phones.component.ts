@@ -73,4 +73,7 @@ export class PhonesComponent implements OnInit {
     this.phone.splice(index, 1);
   }
 
+  addToCart(phone) {
+    this.toastService.showToast('success', 3000, 'product added to cart!')
+  }
 }

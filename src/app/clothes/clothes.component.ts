@@ -70,4 +70,7 @@ export class ClothesComponent implements OnInit {
     this.clothes.splice(index, 1);
   }
 
+  addToCart(clothes) {
+    this.toastService.showToast('success', 3000, 'product added to cart!')
+  }
 }
