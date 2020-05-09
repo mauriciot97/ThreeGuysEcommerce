@@ -5,6 +5,11 @@
       <mat-card-content>
         <img class="cover" [src]="clothes.image_url" alt="bike">
         <p>
+          <label for="id">ID</label>
+          <input [(ngModel)]="clothes.id" disabled type="text" class="form-control" placeholder="ID" aria-label="price"
+            aria-describedby="basic-addon1">
+        </p>
+        <p>
           <label for="price">Brand</label>
           <input [(ngModel)]="clothes.brand" disabled type="text" class="form-control" placeholder="Make" aria-label="price"
             aria-describedby="basic-addon1">
@@ -39,10 +44,12 @@
         <div class="btn-group pull-right">
           <button mat-raised-button color="primary" class="pull-right" (click)="updateClothes(clothes)">Update</button>
           <button mat-raised-button color="primary" class="pull-right" (click)="addToCart(clothes)">Add to Cart</button>
-          <button mat-raised-button color="warn" (click)="removeClothes(clothes, i)">Message Seller</button>
+          <button mat-raised-button color="warn" (click)="removeClothes(clothes, i)">Remove</button>
+          <a class="btn btn-primary" href="/message" role="button">Message Seller</a>
         </div>
       </mat-card-actions>
     </mat-card>
   </div>
 </div>
+<button mat-raised-button color="primary" (click)="createClothes()">Add New Clothes</button>
 <app-footer></app-footer>

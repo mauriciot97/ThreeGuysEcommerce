@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
     FooterComponent,
     ShoppingCartComponent,
     CheckoutComponent,
-    OrderConfirmationComponent
+    OrderConfirmationComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

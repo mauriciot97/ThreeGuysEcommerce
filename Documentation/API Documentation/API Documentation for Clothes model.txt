@@ -1,0 +1,193 @@
+Description: Get all the clothes from the database
+Endpoint: http://localhost:3002/api/v1/clothes/
+Method: GET
+Params: none
+Request Payload: none
+Response:
+{
+        "id": 1,
+        "brand": "Nike",
+        "model": null,
+        "color": "Pink",
+        "user_id": null,
+        "active": true,
+        "created_by": "mauriciot97",
+        "updated_by": "mauriciot97",
+        "created_at": "2020-04-14T03:07:02.082Z",
+        "updated_at": "2020-05-05T21:08:08.837Z",
+        "deleted_at": null,
+        "size": "S",
+        "gender": "F",
+        "user": null,
+        "image_url": "https://dtpmhvbsmffsz.cloudfront.net/posts/2015/02/14/54df9eb05579ce45610d9163/m_54df9eb15579ce45610d9166.jpg",
+        "price": "$20.00",
+        "seller": "chris"
+    },
+    {
+        "id": 2,
+        "brand": "Levis",
+        "model": null,
+        "color": "blue",
+        "user_id": null,
+        "active": true,
+        "created_by": "mauriciot97",
+        "updated_by": "mauriciot97",
+        "created_at": "2020-04-14T03:12:03.727Z",
+        "updated_at": "2020-05-05T21:08:07.655Z",
+        "deleted_at": null,
+        "size": "L",
+        "gender": "M",
+        "user": null,
+        "image_url": "https://dimg.dillards.com/is/image/DillardsZoom/zoom/levis-big-boys-8-18--510-skinny-jeans/03101513_zi_morning_side.jpg",
+        "price": "$10.00",
+        "seller": "mauriciot97"
+    },
+    {
+        "id": 3,
+        "brand": "Jordans 4 Retro Black",
+        "model": null,
+        "color": "Black",
+        "user_id": null,
+        "active": true,
+        "created_by": "mauriciot97",
+        "updated_by": "mauriciot97",
+        "created_at": "2020-05-04T21:30:40.686Z",
+        "updated_at": "2020-05-09T05:33:49.204Z",
+        "deleted_at": null,
+        "size": "12",
+        "gender": "M",
+        "user": null,
+        "image_url": "https://stockx-360.imgix.net/Air-Jordan-4-Retro-Black-Cat-2020/Images/Air-Jordan-4-Retro-Black-Cat-2020/Lv2/img01.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1580325806",
+        "price": "$200.00",
+        "seller": "simran"
+    },
+    {
+        "id": 4,
+        "brand": "Yankee",
+        "model": null,
+        "color": "Black",
+        "user_id": null,
+        "active": true,
+        "created_by": "mauriciot97",
+        "updated_by": "mauriciot97",
+        "created_at": "2020-05-04T21:41:59.103Z",
+        "updated_at": "2020-05-09T05:33:58.053Z",
+        "deleted_at": null,
+        "size": "N/A",
+        "gender": "Both",
+        "user": null,
+        "image_url": "https://i.ebayimg.com/images/g/68YAAOSwcMNejRCx/s-l400.jpg",
+        "price": "$1000.00",
+        "seller": "mauriciot97"
+    }
+---------------------------------------------------------------------------
+Description: Get clothes by its ID from the database
+Endpoint: http://localhost:3002/api/v1/clothes/id/1
+Method: GET
+Params: id - the id of the clothes
+Request Payload: none
+Response:
+{
+        "id": 1,
+        "brand": "Nike",
+        "model": null,
+        "color": "Pink",
+        "user_id": null,
+        "active": true,
+        "created_by": "mauriciot97",
+        "updated_by": "mauriciot97",
+        "created_at": "2020-04-14T03:07:02.082Z",
+        "updated_at": "2020-05-05T21:08:08.837Z",
+        "deleted_at": null,
+        "size": "S",
+        "gender": "F",
+        "user": null,
+        "image_url": "https://dtpmhvbsmffsz.cloudfront.net/posts/2015/02/14/54df9eb05579ce45610d9163/m_54df9eb15579ce45610d9166.jpg",
+        "price": "$20.00",
+        "seller": "chris"
+    }
+---------------------------------------------------------------------------
+Description: Create a new clothes record
+Endpoint: http://localhost:3002/api/v1/clothes/create-clothes
+Method: POST
+Params: none
+Request Payload:
+{
+	"brand": "Gucci",
+	"size": "S",
+	"gender": "F",
+	"color": "Brown",
+	"price": "$1000",
+	"seller": "simranbrar"
+}
+Response: 
+{
+            "id": 6,
+            "brand": "Gucci",
+            "model": null,
+            "color": "Brown",
+            "user_id": null,
+            "active": true,
+            "created_by": "mauriciot97",
+            "updated_by": null,
+            "created_at": "2020-05-09T06:42:34.070Z",
+            "updated_at": "2020-05-09T06:42:34.070Z",
+            "deleted_at": null,
+            "size": "S",
+            "gender": "F",
+            "user": null,
+            "image_url": null,
+            "price": "$1000",
+            "seller": "simranbrar"
+        }
+---------------------------------------------------------------------------
+Description: Update a clothes record
+Endpoint: http://localhost:3002/api/v1/clothes/update-clothes/id/6
+Method: PUT
+Params: id - the id of the clothes
+Request Payload: 
+{
+	"brand": "Gucci",
+	"size": "S",
+	"gender": "F",
+	"color": "Brown",
+	"price": "$1500",
+	"seller": "simranbrar"
+}
+Response: 
+{
+            "id": 6,
+            "brand": "Gucci",
+            "model": null,
+            "color": "Brown",
+            "user_id": null,
+            "active": true,
+            "created_by": "mauriciot97",
+            "updated_by": "mauriciot97",
+            "created_at": "2020-05-09T06:42:34.070Z",
+            "updated_at": "2020-05-09T06:43:33.610Z",
+            "deleted_at": null,
+            "size": "S",
+            "gender": "F",
+            "user": null,
+            "image_url": null,
+            "price": "$1500",
+            "seller": "simranbrar"
+        }
+---------------------------------------------------------------------------
+Description: Delete a clothes record
+Endpoint: http://localhost:3002/api/v1/clothes/delete-clothes/id/6
+Method: DELETE
+Params: id - the id of the clothes
+Request Payload: none
+Response:
+{
+            "command": "DELETE",
+            "rowCount": 1,
+            "oid": null,
+            "rows": [],
+            "fields": [],
+            "_parsers": [],
+            "RowCtor": null,
+            "rowAsArray": false
+        }

@@ -8,6 +8,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { MessageComponent } from './message/message.component';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 
 const appRoutes: Routes = [
@@ -45,6 +47,10 @@ const appRoutes: Routes = [
   {
     path: 'thankyou',
     component: OrderConfirmationComponent
+  },
+  {
+    path: 'message',
+    component: MessageComponent
   }
 ];
 
