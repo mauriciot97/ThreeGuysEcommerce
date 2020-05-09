@@ -17,6 +17,11 @@ import { SharedServiceModule } from '../shared-service/shared-service.module';
 import { ClothesComponent } from './clothes/clothes.component';
 import { PhonesComponent } from './phones/phones.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { MainPageComponent } from './main-page/main-page.component';
     CartComponent,
     ClothesComponent,
     PhonesComponent,
-    MainPageComponent
+    MainPageComponent,
+    FooterComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
+    OrderConfirmationComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

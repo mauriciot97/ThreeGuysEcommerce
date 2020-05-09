@@ -76,4 +76,8 @@ export class CartComponent implements OnInit {
     this.cars.splice(index, 1);
   }
 
+  addToCart(car) {
+    this.toastService.showToast('success', 3000, 'product added to cart!')
+  }
+
 }

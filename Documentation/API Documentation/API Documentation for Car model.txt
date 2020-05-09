@@ -1,0 +1,193 @@
+Description: Get all the cars from the database
+Endpoint: http://localhost:3002/api/v1/car/get-all-cars
+Method: GET
+Params: none
+Request Payload: none
+Response:
+{
+                "id": 2,
+                "make": "Mitsubishi",
+                "model": "Eclipse",
+                "year": "2002",
+                "user_id": 1,
+                "active": true,
+                "created_by": "mauriciot97",
+                "updated_by": "mauriciot97",
+                "created_at": "2020-04-07T20:40:50.329Z",
+                "updated_at": "2020-05-05T21:06:45.237Z",
+                "deleted_at": null,
+                "mileage": "150,000",
+                "color": "Red",
+                "image_url": "https://s.aolcdn.com/commerce/autodata/images/20MIGEA1.jpg",
+                "seller": "chris",
+                "description": null,
+                "price": "$2,500"
+            },
+            {
+                "id": 1,
+                "make": "Ford",
+                "model": "Mustang",
+                "year": "2020",
+                "user_id": null,
+                "active": true,
+                "created_by": "mauriciot97",
+                "updated_by": "mauriciot97",
+                "created_at": "2020-04-14T03:07:02.082Z",
+                "updated_at": "2020-05-06T04:18:26.837Z",
+                "deleted_at": null,
+                "mileage": "0",
+                "color": "Blue",
+                "image_url": "https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2020/collections/3-2/20_frd_mst_ps34_ebp_vctb.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg",
+                "seller": "simran",
+                "description": null,
+                "price": "$31,685"
+            },
+            {
+                "id": 3,
+                "make": "BMW",
+                "model": "325i",
+                "year": "2006",
+                "user_id": null,
+                "active": true,
+                "created_by": "mauriciot97",
+                "updated_by": "mauriciot97",
+                "created_at": "2020-04-23T04:31:28.932Z",
+                "updated_at": "2020-05-09T05:34:20.269Z",
+                "deleted_at": null,
+                "mileage": "186,000",
+                "color": "White",
+                "image_url": "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/13439101_1116825708379971_2401857686690358721_n.jpg?_nc_cat=106&_nc_sid=a9b1d2&_nc_ohc=DwF3ssCGpmUAX-CZTJ_&_nc_ht=scontent-sjc3-1.xx&oh=ec6902f1ac0eefd84e22b4caa65fb70b&oe=5EC6A304",
+                "seller": "mauriciot97",
+                "description": null,
+                "price": "$6,600"
+            },
+            {
+                "id": 4,
+                "make": "Kia",
+                "model": "Sephia",
+                "year": "2000",
+                "user_id": null,
+                "active": true,
+                "created_by": "mauriciot97",
+                "updated_by": "mauriciot97",
+                "created_at": "2020-04-23T04:42:40.216Z",
+                "updated_at": "2020-05-09T05:34:31.164Z",
+                "deleted_at": null,
+                "mileage": "220,000",
+                "color": "Tan",
+                "image_url": "https://www.autodetective.com/image/medium/kia/sephia/2000/51821.jpg",
+                "seller": "mauriciot97",
+                "description": null,
+                "price": "$1,300"
+            }
+---------------------------------------------------------------------------
+Description: Get a car by its ID from the database
+Endpoint: http://localhost:3002/api/v1/car/get-car-by-id/1
+Method: GET
+Params: id - the car id
+Request Payload: none
+Response:
+{
+                "id": 1,
+                "make": "Ford",
+                "model": "Mustang",
+                "year": "2020",
+                "user_id": null,
+                "active": true,
+                "created_by": "mauriciot97",
+                "updated_by": "mauriciot97",
+                "created_at": "2020-04-14T03:07:02.082Z",
+                "updated_at": "2020-05-06T04:18:26.837Z",
+                "deleted_at": null,
+                "mileage": "0",
+                "color": "Blue",
+                "image_url": "https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2020/collections/3-2/20_frd_mst_ps34_ebp_vctb.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg",
+                "seller": "simran",
+                "description": null,
+                "price": "$31,685"
+            }
+---------------------------------------------------------------------------
+Description: Create a new car record
+Endpoint: http://localhost:3002/api/v1/car/create-car
+Method: POST
+Params: none
+Request Payload:
+{
+	"make": "Honda",
+	"model": "Civic",
+	"year": "2020",
+	"color": "Red",
+	"mileage": "0"
+}
+Response:
+{
+            "id": 28,
+            "make": "Honda",
+            "model": "Civic",
+            "year": "2020",
+            "user_id": null,
+            "active": true,
+            "created_by": "mauriciot97",
+            "updated_by": null,
+            "created_at": "2020-04-15T21:10:47.882Z",
+            "updated_at": "2020-04-15T21:10:47.882Z",
+            "deleted_at": null,
+            "mileage": "0",
+            "color": "Red"
+        }
+---------------------------------------------------------------------------
+Description: Update a car record
+Endpoint: http://localhost:3002/api/v1/car/update-car/id/28
+Method: PUT
+Params: id - the id of the car
+Request Payload:
+{
+	"make": "Honda",
+	"model": "Civic",
+	"year": "2020",
+	"color": "Red",
+	"mileage": "10"
+}
+Response:
+{
+            "id": 28,
+            "make": "Honda",
+            "model": "Civic",
+            "year": "2020",
+            "user_id": null,
+            "active": true,
+            "created_by": "mauriciot97",
+            "updated_by": "mauriciot97",
+            "created_at": "2020-05-09T06:39:03.770Z",
+            "updated_at": "2020-05-09T06:39:34.834Z",
+            "deleted_at": null,
+            "mileage": "10",
+            "color": "Red",
+            "image_url": null,
+            "seller": null,
+            "description": null,
+            "price": null
+        }
+---------------------------------------------------------------------------
+Description: Delete a car record
+Endpoint: http://localhost:3002/api/v1/car/delete-car/id/28
+Method: DELETE
+Params: id - the id of the car
+Request Payload: None
+Response:
+{
+    "message": "Success",
+    "resp": {
+        "data": {
+            "command": "DELETE",
+            "rowCount": 1,
+            "oid": null,
+            "rows": [],
+            "fields": [],
+            "_parsers": [],
+            "RowCtor": null,
+            "rowAsArray": false
+        },
+        "statusCode": 200
+    }
+}

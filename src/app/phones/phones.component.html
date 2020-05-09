@@ -1,53 +1,50 @@
-<ul class="nav justify-content-end nav-action-container">
-  <li class="nav-item">
-    <button mat-raised-button color="primary" (click)="createphone()">Add New Car</button>
-  </li>
-</ul>
-<div class="contact-grid">
+<app-main-nav></app-main-nav>
+<div class="album py-5 bg-light">
   <div class="gallery-grid">
     <mat-card class="example-card" *ngFor="let phone of phone; let i = index">
       <mat-card-content>
         <img class="cover" [src]="phone.image_url" alt="bike">
         <p>
-          <label for="id">Image Url:</label>
-          <input [(ngModel)]="phone.image_url" type="text" class="form-control" placeholder="ID" aria-label="ID">
-        </p>
-        <p>
-          <label for="id">ID:</label>
-          <input [(ngModel)]="phone.id" disabled type="text" class="form-control" placeholder="ID" aria-label="ID">
+          <label for="id">ID</label>
+          <input [(ngModel)]="phone.id" disabled type="text" class="form-control" placeholder="ID" aria-label="price"
+            aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="price">Brand</label>
-          <input [(ngModel)]="phone.brand" type="text" class="form-control" placeholder="Brand" aria-label="Brand"
+          <input [(ngModel)]="phone.brand" disabled type="text" class="form-control" placeholder="Brand" aria-label="Brand"
             aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="description">Model</label>
-          <input [(ngModel)]="phone.model" type="text" class="form-control" placeholder="Model" aria-label="Model"
+          <input [(ngModel)]="phone.model" disabled type="text" class="form-control" placeholder="Model" aria-label="Model"
             aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="price">Color</label>
-          <input [(ngModel)]="phone.color" type="text" class="form-control" placeholder="Color" aria-label="Color"
+          <input [(ngModel)]="phone.color" disabled type="text" class="form-control" placeholder="Color" aria-label="Color"
             aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="price">Price</label>
-          <input [(ngModel)]="phone.price" type="text" class="form-control" placeholder="Price" aria-label="Price"
+          <input [(ngModel)]="phone.price" disabled type="text" class="form-control" placeholder="Price" aria-label="Price"
             aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="price">Seller</label>
-          <input [(ngModel)]="phone.seller" type="text" class="form-control" placeholder="Seller" aria-label="Seller"
+          <input [(ngModel)]="phone.seller" disabled type="text" class="form-control" placeholder="Seller" aria-label="Seller"
             aria-describedby="basic-addon1">
         </p>
       </mat-card-content>
       <mat-card-actions>
         <div class="btn-group pull-right">
-          <button mat-raised-button color="primary" class="pull-right" (click)="updatePhone(phone)">Save</button>
-          <button mat-raised-button color="warn" (click)="removePhone(phone, i)">Delete</button>
+          <button mat-raised-button color="primary" class="pull-right" (click)="updatePhone(phone)">Update</button>
+          <button mat-raised-button color="primary" class="pull-right" (click)="addToCart(phone)">Add to Cart</button>
+          <button mat-raised-button color="warn" (click)="removePhone(phone, i)">Remove</button>
+          <a class="btn btn-primary" href="/message" role="button">Message Seller</a>
         </div>
       </mat-card-actions>
     </mat-card>
   </div>
 </div>
+<button mat-raised-button color="primary" (click)="createPhone()">Add New Phone</button>
+<app-footer></app-footer>
